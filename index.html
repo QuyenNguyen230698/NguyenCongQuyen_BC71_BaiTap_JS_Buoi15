@@ -30,32 +30,42 @@
         <div class="col-md-12">
             <form action="" method="POST">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Họ và tên</label>
-                    <input type="text" class="form-control" id="name" name="name" />
+                    <label for="math" class="form-label">Điểm toán:</label>
+                    <input type="text" class="form-control" id="math" name="math" />
                 </div>
                 <div class="mb-3">
-                    <label for="math" class="form-label">Điểm toán</label>
-                    <input type="number" class="form-control" id="math" name="math" />
+                    <label for="literature" class="form-label">Điểm văn:</label>
+                    <input type="text" class="form-control" id="literature" name="literature" />
                 </div>
                 <div class="mb-3">
-                    <label for="literature" class="form-label">Điểm văn</label>
-                    <input type="number" class="form-control" id="literature" name="literature" />
+                    <label for="english" class="form-label">Điểm tiếng Anh:</label>
+                    <input type="text" class="form-control" id="english" name="english" />
                 </div>
                 <div class="mb-3">
-                    <label for="english" class="form-label">Điểm tiếng Anh</label>
-                    <input type="number" class="form-control" id="english" name="english" />
+                    <label for="province" class="form-label">Chọn khu vực:</label>
+                    <br>
+                    <input type="radio" name="khuVuc">
+                    <span>A</span>
+                    <input type="radio" name="khuVuc">
+                    <span>B</span>
+                    <input type="radio" name="khuVuc">
+                    <span>C</span>
+                    <input type="radio" name="khuVuc">
+                    <span>X (Không thuộc khu vực ưu tiên)</span>
                 </div>
                 <div class="mb-3">
-                    <label for="province" class="form-label">Tỉnh/Thành phố</label>
-                    <select class="form-select" id="province" name="province">
-                        <option value="1">Hà Nội</option>
-                        <option value="2">Hồ Chí Minh</option>
-                        <option value="3">Đà Nẵng</option>
-                        <option value="4">Hải Phòng</option>
-                        <option value="5">Cần Thơ</option>
-                    </select>
+                    <label for="province" class="form-label">Chọn đối tượng:</label>
+                    <br>
+                    <input type="radio" name="doiTuong">
+                    <span>1</span>
+                    <input type="radio" name="doiTuong">
+                    <span>2</span>
+                    <input type="radio" name="doiTuong">
+                    <span>3</span>
+                    <input type="radio" name="doiTuong">
+                    <span>0 (Không thuộc đối tượng ưu tiên)</span>
                 </div>
-                <button type="submit" class="btn btn-primary">Xác nhận</button>
+                <button type="submit" onclick="tinhDiem()" class="btn btn-primary">Xác nhận</button>
             </form>
         </div>
     </div>
