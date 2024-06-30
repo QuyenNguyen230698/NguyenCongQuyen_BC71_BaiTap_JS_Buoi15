@@ -21,54 +21,52 @@
     <body>
         <!-- Bài tập quản lý tuyển sinh -->
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">Quản lý tuyển sinh</h1>
-        </div>
+    <div>
+        <span class="contact100-form-title"> TÍNH CƯỚC UBER </span>
+          <h2>Vui lòng chọn khu vực:</h2>
+          <ul>
+            <li class="type">
+              <input type="radio" id="a" value="a" name="selector" />
+              <label for="a">A</label>
+
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                id="b"
+                value="b"
+                name="selector"
+              />
+              <label for="b">B</label>
+              <div class="check"></div>
+            </li>
+
+            <li class="type">
+              <input
+                type="radio"
+                id="c"
+                `
+                value="c"
+                name="selector"
+              />
+              <label for="c">C</label>
+              <div class="check"></div>
+            </li>
+          </ul>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <form action="" method="POST">
-                <div class="mb-3">
-                    <label for="math" class="form-label">Điểm toán:</label>
-                    <input type="text" class="form-control" id="math" name="math" />
-                </div>
-                <div class="mb-3">
-                    <label for="literature" class="form-label">Điểm văn:</label>
-                    <input type="text" class="form-control" id="literature" name="literature" />
-                </div>
-                <div class="mb-3">
-                    <label for="english" class="form-label">Điểm tiếng Anh:</label>
-                    <input type="text" class="form-control" id="english" name="english" />
-                </div>
-                <div class="mb-3">
-                    <label for="province" class="form-label">Chọn khu vực:</label>
-                    <br>
-                    <input type="radio" name="khuVuc">
-                    <span>A</span>
-                    <input type="radio" name="khuVuc">
-                    <span>B</span>
-                    <input type="radio" name="khuVuc">
-                    <span>C</span>
-                    <input type="radio" name="khuVuc">
-                    <span>X (Không thuộc khu vực ưu tiên)</span>
-                </div>
-                <div class="mb-3">
-                    <label for="province" class="form-label">Chọn đối tượng:</label>
-                    <br>
-                    <input type="radio" name="doiTuong">
-                    <span>1</span>
-                    <input type="radio" name="doiTuong">
-                    <span>2</span>
-                    <input type="radio" name="doiTuong">
-                    <span>3</span>
-                    <input type="radio" name="doiTuong">
-                    <span>0 (Không thuộc đối tượng ưu tiên)</span>
-                </div>
-                <button type="submit" onclick="tinhDiem()" class="btn btn-primary">Xác nhận</button>
-            </form>
-        </div>
-    </div>
+    <div style="clear: both"></div>
+    <button
+              type="button"
+              onclick="tinhDiem()"
+              class="contact100-form-btn"
+              data-tog
+              gle="modal"
+              data-target="#exampleModal"
+            >
+              Xác nhận
+            </button>
 </div>
 
         <!-- Bài tập tính tiền điện -->
