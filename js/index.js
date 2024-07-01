@@ -48,6 +48,51 @@ function tinhDiem() {
 }
 //Bài tập tính tiền điện
 
+function tinhTienDien() {
+    var nhapKwDien = document.getElementById('kw').value * 1;
+    console.log("🚀 ~ tinhTienDien ~ nhapKwDien:", nhapKwDien)
+    var kwPriceOne = null;
+    var kwPriceTwo = null;
+    var kwPriceThree = null;
+    var kwPriceFour = null;
+    var kwPriceFive = null;
+    var total = null;
+    if (nhapKwDien > 0 && nhapKwDien <= 50) {
+        var kwPriceOne = 500;
+        var total = nhapKwDien * kwPriceOne;
+        console.log("🚀 ~ tinhTienDien ~ total:", total)
+    } else if (nhapKwDien > 50 && nhapKwDien <= 100) {
+        var kwPriceOne = 500;
+        var kwPriceTwo = 650;
+        var total = 50 * kwPriceOne + (nhapKwDien - 50) * kwPriceTwo;
+        console.log("🚀 ~ tinhTienDien ~ total:", total)
+    } else if (nhapKwDien > 100 && nhapKwDien <= 200) {
+        var kwPriceOne = 500;
+        var kwPriceTwo = 650;
+        var kwPriceThree = 850;
+        var total = 50 * kwPriceOne + 50 * kwPriceTwo + (nhapKwDien - 100) * kwPriceThree;
+        console.log("🚀 ~ tinhTienDien ~ total:", total)
+    } else if (nhapKwDien > 200 && nhapKwDien <= 350) {
+        var kwPriceOne = 500;
+        var kwPriceTwo = 650;
+        var kwPriceThree = 850;
+        var kwPriceFour = 1100;
+        var total = 50 * kwPriceOne + 50 * kwPriceTwo + 100 * kwPriceThree + (nhapKwDien - 200) * kwPriceFour;
+        console.log("🚀 ~ tinhTienDien ~ total:", total)
+    } else {
+        var kwPriceOne = 500;
+        var kwPriceTwo = 650;
+        var kwPriceThree = 850;
+        var kwPriceFour = 1100;
+        var kwPriceFive = 1300;
+        var total = 50 * kwPriceOne + 50 * kwPriceTwo + 100 * kwPriceThree + 150 * kwPriceFour + (nhapKwDien - 350) * kwPriceFive;
+        console.log("🚀 ~ tinhTienDien ~ total:", total)
+    }
+    document.getElementById("kqTienDien").innerHTML =
+    total + " VND / " + nhapKwDien + " Kw";
+}
 //Bài tập tính thuế thu nhập cá nhân
+
+
 
 //Bài tập tính tiền cáp
