@@ -22,7 +22,7 @@
     <!-- Bài tập quản lý tuyển sinh -->
     <div class="container">
       <div>
-        <h2>Quản lý tuyển sinh</h2>
+        <h2 class="text-warning text-uppercase">Quản lý tuyển sinh</h2>
         <!-- nhập điểm -->
       </div>
       <div>
@@ -109,7 +109,7 @@
 
     <!-- Bài tập tính tiền điện -->
     <div class="container">
-      <h2>Quản lý tính tiền điện</h2>
+      <h2 class="text-warning text-uppercase">Quản lý tính tiền điện</h2>
       <div>
         <label for="ten">Số Kw:</label>
         <input type="text" id="kw" class="mb-2" />
@@ -118,12 +118,59 @@
       <div>
         <button id="tienDien" onclick="tinhTienDien()">Xác nhận</button>
       </div>
-      <div id="kqTienDien"></div>
+      <div id="kqTienDien">0.0 vnđ</div>
     </div>
 
     <!-- Bài tập tính thuế thu nhập cá nhân -->
+    <div class="container">
+        <h2 class="text-warning text-uppercase">Tính thuế thu nhập cá nhân</h2>
+        <div>
+          <label for="ten">Nhập tổng thu nhập năm:</label>
+          <input type="text" id="thue" class="mb-2" />
+          <label for="ten">Số người phụ thuộc:</label>
+          <input type="text" id="phuThuoc" class="mb-2" />
+        </div>
+        <div style="clear: both"></div>
+        <div>
+          <button id="tienThue" onclick="tinhTienThue()">Xác nhận</button>
+        </div>
+        <div id="kqTienThue">0.0 vnđ </div>
+      </div>
 
     <!-- Bài tập tính tiền cáp -->
+
+    <div class="container">
+        <h2 class="text-warning text-uppercase">Tính tiền cáp</h2>
+        <div>
+        <div>
+            <h2>Chọn loại khách hàng:</h2>
+            <ul>
+                <li class="type">
+                    <input type="radio" id="a" value="areaA" name="selector" />
+                    <label for="a">Nhà dân</label>
+        
+                    <div class="check"></div>
+                  </li>
+        
+                  <li class="type">
+                    <input type="radio" id="b" value="areaB" name="selector" />
+                    <label for="b">Doanh nghiệp</label>
+                    <div class="check"></div>
+                  </li>
+            </ul>
+        </div>
+          <label for="ten">Nhập tổng thu nhập năm:</label>
+          <input type="text" id="thue" class="mb-2" />
+          <label for="ten">Số người phụ thuộc:</label>
+          <input type="text" id="phuThuoc" class="mb-2" />
+        </div>
+        <div style="clear: both"></div>
+        <div>
+          <button id="tienThue" onclick="tinhTienThue()">Xác nhận</button>
+        </div>
+        <div id="kqTienThue">0.0 vnđ </div>
+      </div>
+
 
     <!-- Bootstrap JavaScript Libraries -->
     <script
