@@ -106,6 +106,7 @@ function tinhTienDien() {
       (nhapKwDien - 350) * kwPriceFive;
     console.log("🚀 ~ tinhTienDien ~ total:", total);
   }
+  document.getElementById("kqTienDien").style.display = 'block';
   document.getElementById("kqTienDien").innerHTML =
     total + " VND / " + nhapKwDien + " Kw";
 }
@@ -138,8 +139,44 @@ var thuNhapChiuThue = ((tongThuNhapNam - luongCoBan - (ngPhuThuoc*thueNgPhuThuoc
   console.log("🚀 ~ tinhTienThue ~ thuNhapChiuThue:", thuNhapChiuThue)
   
   //xuat KQ
+  document.getElementById("kqTienThue").style.display = 'block';
   document.getElementById("kqTienThue").innerHTML = thuNhapChiuThue.toLocaleString()+ " VNĐ";
 }
 
 //Bài tập tính tiền cáp
 
+
+function khachHang() {
+    var moHinh = document.querySelector('input[name="cabel"]:checked').value;
+    
+    if (moHinh == "tuNhan") {
+        document.getElementById("tienCapNhaDan").style.display = 'block';
+        document.getElementById("tienCapDoanhNghiep").style.display = 'none';
+    } else {
+        document.getElementById("tienCapDoanhNghiep").style.display = 'block';
+        document.getElementById("tienCapNhaDan").style.display = 'none';
+    }
+}
+
+function tinhTienCap() {
+    var moHinh = document.querySelector('input[name="cabel"]:checked').value;
+    var soKetNoiDoanhNghiep = document.getElementById("soKetNoi").value * 1;
+    var ketNoiDau = 0;
+    var ketNoiHai = 0;
+
+    if (moHinh == "tuNhan") {
+        var tienThueTuNhan = 32.5;
+        document.getElementById("kqTienCap").innerHTML = tienThueTuNhan.toLocaleString() + " $";
+    } else if (soKetNoiDoanhNghiep <= 10) {
+        var ketNoiDau = 7.5;
+        var ketNoiHai = 5;
+        var tienThueDoanhNghiep = ketNoiDau * soKetNoiDoanhNghiep;
+        document.getElementById("kqTienCap").innerHTML = tienThueDoanhNghiep.toLocaleString() + " $";
+    } else {
+        var ketNoiDau = 7.5;
+        var ketNoiHai = 5;
+        var tienThueDoanhNghiep = ketNoiDau * 10 + (soKetNoiDoanhNghiep - 10) * ketNoiHai;
+        document.getElementById("kqTienCap").innerHTML = tienThueDoanhNghiep.toLocaleString() + " $";
+    }
+    document.getElementById("kqTienCap").style.display = 'block';
+}

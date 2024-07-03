@@ -17,6 +17,18 @@
       crossorigin="anonymous"
     />
   </head>
+  <style>
+    #tienCapNhaDan,
+    #tienCapDoanhNghiep,
+    #kqTienThue,
+    #kqTienDien,
+    #kqTienCap {
+        display: none;
+    }
+    li {
+      list-style: none;
+    }
+  </style>
 
   <body>
     <!-- Bài tập quản lý tuyển sinh -->
@@ -142,33 +154,51 @@
     <div class="container">
         <h2 class="text-warning text-uppercase">Tính tiền cáp</h2>
         <div>
-        <div>
             <h2>Chọn loại khách hàng:</h2>
-            <ul>
-                <li class="type">
-                    <input type="radio" id="a" value="areaA" name="selector" />
-                    <label for="a">Nhà dân</label>
+            <ul class="nav">
+                <li class="type nav-item">
+                    <input type="radio" id="nhaDan" value="tuNhan" name="cabel" />
+                    <label for="nhaDan">Nhà dân</label>
         
                     <div class="check"></div>
                   </li>
         
-                  <li class="type">
-                    <input type="radio" id="b" value="areaB" name="selector" />
-                    <label for="b">Doanh nghiệp</label>
+                  <li class="type nav-item">
+                    <input type="radio" id="congTy" value="doanhNghiep" name="cabel" />
+                    <label for="congTy">Doanh nghiệp</label>
                     <div class="check"></div>
                   </li>
             </ul>
+            <button id="chonKhach" class="mb-3" onclick="khachHang()">Chọn</button>
         </div>
-          <label for="ten">Nhập tổng thu nhập năm:</label>
-          <input type="text" id="thue" class="mb-2" />
-          <label for="ten">Số người phụ thuộc:</label>
-          <input type="text" id="phuThuoc" class="mb-2" />
+        <div id="tienCapNhaDan">
+            <h2>Nhà dân:</h2>
+            <p>
+                Phí xử lý hoán đơn: 4.5$
+                <br>
+                Phí dịch vụ cơ bản: 20.5$
+                <br>
+                Kênh cao cấp: 7.5$
+            </p>
         </div>
+        <div id="tienCapDoanhNghiep">
+            <h2>Doanh nghiệp:</h2>
+            <p>
+                Phí xử lý hoán đơn: 15$
+                <br>
+                Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$/ kết nối
+                <br>
+                Kênh cao cấp: 50$
+            </p>
+            <label for="ten">Nhập số kết nối:</label>
+            <input type="text" id="soKetNoi" class="mb-2" />
+        </div>
+
         <div style="clear: both"></div>
         <div>
-          <button id="tienThue" onclick="tinhTienThue()">Xác nhận</button>
+          <button id="tienThue" onclick="tinhTienCap()">Xác nhận</button>
         </div>
-        <div id="kqTienThue">0.0 vnđ </div>
+        <div id="kqTienCap">0.0 $ </div>
       </div>
 
 
